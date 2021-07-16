@@ -69,7 +69,7 @@ export function AlurakutMenu({ githubUser }) {
 
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #308BC5;
+  background-color: #006699;
 
   .alurakutMenuProfileSidebar {
     background: white;
@@ -109,7 +109,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
   }
   .container {
-    background-color: #308BC5;
+    background-color: #006699;
     padding: 0.44rem 1rem;
     max-width: 69.38rem;
     margin: auto;
@@ -287,7 +287,7 @@ export function OrkutNostalgicIconSet(props) {
               src={`https://alurakut.vercel.app/icons/${icon}.svg`} 
             />
 
-            {props[slug] ? props[slug] : 0}
+            {props[slug] ? props[slug] : 6}
 
           </span>
 
@@ -301,7 +301,7 @@ export function OrkutNostalgicIconSet(props) {
         { name: 'Sexy', slug: 'sexy', icon: 'heart' },
       ].map(({ name, slug, icon }) => {
 
-        const total = props[slug] ? props[slug] : 2;
+        const total = props[slug] ? props[slug] : 3;
 
         return (
 

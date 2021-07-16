@@ -19,12 +19,12 @@ export default function Home() {
   const githubUser = 'BManduca';
 
   const pessoasFavoritas = [
-    'leonardotdleal',
     'RafaelCamarda',
     'maykbrito',
     'diego3g',
-    'guilhermecapitao',
     'juunegreiros',
+    'peas',
+    'omariosouto'
   ]
 
   return (
