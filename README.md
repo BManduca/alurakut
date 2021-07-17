@@ -1,84 +1,212 @@
-# Example app with styled-components
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
 
-## Preview
+![icon_alurakut](file:///Users/brunnomanduca/Documents/repositórios/Alura/Imersão_React/alura-challenges/alurakut/public/assets/logo.svg)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-styled-components)
 
-## Deploy your own
+## Súmario
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- [Aplicação](#📲-aplicação)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+- [Alurakut](#❓Alurakut❗)
 
-## How to use
+- [Tecnologias presentes na aplicação](#🖥-tecnologias-presentes-na-aplicação)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- [Layout da aplicação](#layout-da-aplicação)
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
+- [Funcionalidades](#funcionalidades)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- [Desafios](#🆙-desafios)
 
-### Try it on CodeSandbox
+- [Clone, instalação e uso da aplicação](#🚀-clone-instalação-e-uso-da-aplicação)
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+- [Contribuindo com projeto](#contribuindo-com-projeto)
 
-### Notes
+- [License](#license)
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
+- [Contato](#📧-contato)
 
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
+  
 
-**components/StyledLink.js**
+  ## 📲 Aplicação
 
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+  - Este projeto consiste em estar recriando toda a interface do famoso Orkut, porém, batizado de Alurakut.
 
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
+  - Projeto foi desenvolvido durante a imersão React, lecionada através da plataforma Alura.
 
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  - Professores: Juliana Negreiros, Paulo e Mario Souto.
 
-  &:hover {
-    color: #40a9ff;
-  }
+    
 
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
+  ## ❓Alurakut❗
 
-**pages/index.js**
+  - Acessar a página da aplicação  =>  👾 [Alurakut](https://alurakut-bm-bmanduca.vercel.app)
 
-```javascript
-import StyledLink from '../components/StyledLink'
+    
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+  
 
-</details>
+  ## 🖥 Tecnologias presentes na aplicação
+
+  - React
+
+    - Components
+    - Styled Components
+    - Hooks
+    - Protocolo HTTP
+
+  - Requisições com GraphQL
+
+  - BFF
+
+  - Ajax
+
+  - NextJS
+
+    
+
+  ## **Layout da aplicação**
+
+  - **É possível verificar o layout da aplicação através do link -> [Layout Alurakut](https://www.figma.com/file/xHF0n0qxiE2rqjqAILiBUB/Alurakut)**
+
+  - **Lembrando, que para acessar o layout, é preciso ter uma conta no [Figma](http://figma.com)**
+
+    
+
+    
+
+  ## 🆙 **Desafios**
+
+  - Documentação
+
+    - [x] Criação de um Readme bem elaborado para o projeto
+    - [x] Tecnologias e recursos utilizados no projeto
+    - [x] Clone, instalação e utilização da aplicação
+    - [ ] Print da aplicação
+      
+
+  - Aula 01
+
+    - [x] Pegar os dados da [API do Github](https://api.github.com/users/juunegreiros/followers) e listar seus seguidores.
+
+    - [x] Adicionar quão confiável, legal e sexy você é.
+
+    - [x] Usar Strategy ao invés de vários ifs no css
+
+    - [x] Separar e organizar o código.
+
+    - [x] Publicar o projeto.
+
+    - [x] Deixar o projeto com minhas especificações.
+
+      
+
+  - Aula 02
+
+    - [ ] Criar suas comunidades para compartilhar
+    - [ ] Facilitar cadastro da url da imagem
+    - [ ] Adicionar links para as suas comunidades
+    - [x] Adicionar o projeto na vitrine da alura
+    - [x] Deixar o Readme bem top
+      
+
+  - Aula 03
+    - [ ] 
+      
+  - Aula 04
+    - [ ] 
+      
+  - Aula 05
+    - [ ] 
+
+  
+
+  ## **🚀 Clone, instalação e uso da aplicação**
+
+  - **Como indicação, você precisará das seguintes ferramentas para iniciar**
+
+    - **[Node.js](https://nodejs.org/pt-br/) (versão LTS)**
+
+    - **[Yarn](https://classic.yarnpkg.com/en/docs/install/) (versão LTS)**
+
+    - **[Git](https://git-scm.com)**
+
+    - **Para edição e desenvolvimento, eu indico o [VSCode](https://code.visualstudio.com/)**
+
+      ```
+      # Efetuar clone deste repositório
+      $ (sudo) git clone https://github.com/BManduca/alurakut
+      
+      # Acessar a pasta da aplicação, através do terminal
+      $ cd alurakut
+      
+      # Iniciar aplicação
+      $ (sudo) yarn dev ou npm run dev
+      
+      # O servidor é iniciado através da porta -> 3000
+      # O acesso ficará da seguinte forma -> http://localhost:3000/
+      
+      ```
+
+      
+
+  ## **Contribuindo com projeto**
+
+  - **Passo 01**
+
+    **🍴Efetuar fork do repositório**
+
+  - **Passo 02**
+
+    **👯 Efetuar clone do repositório para sua máquina local**
+
+    ```
+    git clone 
+    ```
+
+  - **Passo 03**
+
+    **🆕 Criar sua própria branch para aplicar suas alterações**
+
+    ```
+    git checkout -b 'name-your-branch'
+    ```
+
+  - **Passo 04**
+
+    **✅ Efetuar commit das suas alterações**
+
+    ```
+    git commit -m 'comentário para marcar o seu commit através da sua branch'
+    ```
+
+  - **Passo 05**
+
+    **📌 Efetuar push na sua branch** 
+
+    ```
+    git push origin 'name-your-branch'
+    ```
+
+  - **Passo 06**
+
+    **🔁 Criar novo pull request**
+
+  
+
+  
+
+  ## **License**
+
+  **This project is under the MIT license. See the [LICENSE](LICENSE.md) file  for more details.**
+
+  ## **📧 Contato**
+
+  **[![Gmail Badge](https://img.shields.io/badge/-brunnomanducarfe@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:brunnomanducarfe@gmail.com)](mailto:brunnomanducarfe@gmail.com) [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/brunno-manduca-b97080118/)](https://www.linkedin.com/in/brunno-manduca-b97080118/)** 
+
+  
+
+  
+
+  

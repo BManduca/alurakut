@@ -3,6 +3,78 @@ import Box from '../Box';
 
 export const ProfileRelationsBoxWrapper = styled(Box)`
 
+  background: #29293d;
+  border: 4px solid #444444;
+  border-radius: 0.5rem;
+  padding: 0rem;
+  color: #F4F4F4;
+  margin: 5px;
+  margin-bottom: 10px;
+
+  .contentBox {
+      padding: 16px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .boxLink {
+    font-size: 14px;
+    color: #F4F4F4;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #F4F4F4;
+  }
+
+  .subTitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .smallTitle {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #F4F4F4;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    border-color: transparent;
+    border-bottom-color: #ECF2FA;
+  }
+
+  input {
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #363AAA;
+    border: 0;
+    padding: 8px 16px;
+    margin-bottom: 14px;
+    border-radius: 10000px;
+
+    ::placeholder {
+      color: #363AAA;
+      opacity: 1;
+    }
+
+  }
+
+  button {
+    border: 0;
+    padding: 8px 12px;
+    color: #FFFFFF;
+    border-radius: 10000px;
+    background-color: #6F92BB;
+  }
+
   ul {
     display: grid;
     grid-gap: 0.5rem;

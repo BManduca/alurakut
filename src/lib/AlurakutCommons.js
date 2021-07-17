@@ -1,10 +1,17 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import NextLink from 'next/link';
+import { createGlobalStyle } from 'styled-components';
 
 const BASE_URL = 'http://alurakut.vercel.app/';
 
 const v = '1';
+
+const LockScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 function Link({href, children, ...props}) {
   return (
@@ -15,6 +22,7 @@ function Link({href, children, ...props}) {
     </NextLink>
   )
 }
+
 
 // ================================================================================================================
 // Menu
@@ -27,6 +35,8 @@ export function AlurakutMenu({ githubUser }) {
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
 
       <div className="container">
+
+        {isMenuOpen && <LockScroll />}
 
         <AlurakutMenu.Logo src={`${BASE_URL}/logo.svg`} />
 
@@ -69,9 +79,10 @@ export function AlurakutMenu({ githubUser }) {
 
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #006699;
+  background-color: #29293d;
 
   .alurakutMenuProfileSidebar {
+    overflow-y: scroll;
     background: white;
     position: fixed;
     z-index: 100;
@@ -109,7 +120,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
   }
   .container {
-    background-color: #006699;
+    background-color: #29293d;
     padding: 0.44rem 1rem;
     max-width: 69.38rem;
     margin: auto;
@@ -155,8 +166,8 @@ AlurakutMenu.Wrapper = styled.header`
       }
     }
     input {
-      color: #ffffff;
-      background: #5579A1;
+      color: #FFFFFF;
+      background: #666699;
       padding: 0.63rem 2.63rem;
       border: 0;
       background-image: url(${`${BASE_URL}/icons/search.svg`});
@@ -165,7 +176,7 @@ AlurakutMenu.Wrapper = styled.header`
       border-radius: 62.50rem;
       font-size: 0.75rem;
       ::placeholder {
-        color: #ffffff;
+        color: #FFFFFF;
         opacity: 1;
       }
     } 
@@ -243,7 +254,7 @@ export function AlurakutProfileSidebarMenuDefault() {
 AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
   a {
     font-size: 0.75rem;
-    color: #2E7BB4;
+    color: #f2f2f2;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -301,7 +312,7 @@ export function OrkutNostalgicIconSet(props) {
         { name: 'Sexy', slug: 'sexy', icon: 'heart' },
       ].map(({ name, slug, icon }) => {
 
-        const total = props[slug] ? props[slug] : 3;
+        const total = props[slug] ? props[slug] : 2;
 
         return (
 
@@ -346,7 +357,7 @@ OrkutNostalgicIconSet.List = styled.ul`
 
   li {
     font-size: 0.75rem;
-    color: #5A5A5A;
+    color: #F4F4F4;
     display: grid;
     grid-template-areas:
       "title title"
