@@ -1,7 +1,7 @@
 
 
 
-![icon_alurakut](file:///Users/brunnomanduca/Documents/repositórios/Alura/Imersão_React/alura-challenges/alurakut/public/assets/logo.svg)
+![icon_alurakut](./public/assets/logo.svg)
 
 
 
@@ -84,42 +84,40 @@
     - [x] Tecnologias e recursos utilizados no projeto
     - [x] Clone, instalação e utilização da aplicação
     - [ ] Print da aplicação
-      
-
+    
   - Aula 01
-
+  
     - [x] Pegar os dados da [API do Github](https://api.github.com/users/juunegreiros/followers) e listar seus seguidores.
-
+  
     - [x] Adicionar quão confiável, legal e sexy você é.
-
+  
     - [x] Usar Strategy ao invés de vários ifs no css
-
+  
     - [x] Separar e organizar o código.
-
+  
     - [x] Publicar o projeto.
-
+  
     - [x] Deixar o projeto com minhas especificações.
-
+  
       
-
+  
   - Aula 02
-
+  
     - [ ] Criar suas comunidades para compartilhar
     - [ ] Facilitar cadastro da url da imagem
     - [ ] Adicionar links para as suas comunidades
     - [x] Adicionar o projeto na vitrine da alura
     - [x] Deixar o Readme bem top
-      
-
+    
   - Aula 03
     - [ ] 
-      
+    
   - Aula 04
     - [ ] 
-      
+    
   - Aula 05
     - [ ] 
-
+  
   
 
   ## **🚀 Clone, instalação e uso da aplicação**
@@ -148,7 +146,7 @@
       # O acesso ficará da seguinte forma -> http://localhost:3000/
       
       ```
-
+  
       
 
   ## **Contribuindo com projeto**
@@ -164,7 +162,7 @@
     ```
     git clone 
     ```
-
+  
   - **Passo 03**
 
     **🆕 Criar sua própria branch para aplicar suas alterações**
@@ -172,7 +170,7 @@
     ```
     git checkout -b 'name-your-branch'
     ```
-
+  
   - **Passo 04**
 
     **✅ Efetuar commit das suas alterações**
@@ -180,7 +178,7 @@
     ```
     git commit -m 'comentário para marcar o seu commit através da sua branch'
     ```
-
+  
   - **Passo 05**
 
     **📌 Efetuar push na sua branch** 
@@ -188,7 +186,7 @@
     ```
     git push origin 'name-your-branch'
     ```
-
+  
   - **Passo 06**
 
     **🔁 Criar novo pull request**
