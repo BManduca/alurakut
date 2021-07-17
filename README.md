@@ -1,9 +1,6 @@
-
-
-
-![icon_alurakut](./public/assets/logo.svg)
-
-
+<p align="center">
+  <img alt="icon_alurakut" title="Alurakut" src="./public/assets/logo.svg" width="230px" >
+</p>
 
 ## Súmario
 
